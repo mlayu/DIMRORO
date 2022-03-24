@@ -1,100 +1,104 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <body>
-  <div class="sidebar">
-    <div class="logo-details">
-        <div class="logo_name">AWEWE</div>
-        <i class='bx bx-menu' id="btn" ></i>
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">AWEWE</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="Beranda.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Beranda</span>
+                </a>
+                <span class="tooltip">Beranda</span>
+            </li>
+            <li>
+                <a href="profil.html">
+                    <i class='bx bx-home'></i>
+                    <span class="links_name">Profil</span>
+                </a>
+                <span class="tooltip">Profil</span>
+            </li>
+            <li>
+                <a href="Login.html">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Login</span>
+                </a>
+                <span class="tooltip">Login</span>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                    <!--<img src="profile.jpg" alt="profileImg">-->
+                    <div class="name_job">
+                        <div class="name">DIMRORO</div>
+                    </div>
+                </div>
+                <i id="log_out"></i>
+            </li>
+        </ul>
     </div>
-    <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li>
-      <li>
-        <a href="Beranda.html">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Beranda</span>
-        </a>
-         <span class="tooltip">Beranda</span>
-      </li>
-      <li>
-        <a href="profil.html">
-          <i class='bx bx-home' ></i>
-          <span class="links_name">Profil</span>
-        </a>
-        <span class="tooltip">Profil</span>
-      </li>
-      <li>
-       <a href="Login.html">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">Login</span>
-       </a>
-       <span class="tooltip">Login</span>
-     </li>
-     <li class="profile">
-         <div class="profile-details">
-           <!--<img src="profile.jpg" alt="profileImg">-->
-           <div class="name_job">
-             <div class="name">DIMRORO</div>
-           </div>
-         </div>
-         <i id="log_out" ></i>
-     </li>
-    </ul>
-  </div>
-  <section class="home-section">
-      <div class="text">SAHA</div>
-      <table>
-        <tr>
-          <td>Username</td>
-          <td>:</td>
-          <td><input type="text" name="user"></td>
-        </tr>
-        <tr>
-          <td>Password</td>
-          <td>:</td>
-          <td><input type="password" name="pass"></td>
-        </tr>
-        <tr>
-          <td><button type="button">Masuk</button></td>
-          <td></td>
-          <td><button type="button">Daftar</button></td>
-        </tr>
-        <tr>
-          <td><button type="button"><a href="Beranda.html">Batal</a></button></td>
-        </tr>
-      </table>
-  </section>
-  
-  <script>
-  let sidebar = document.querySelector(".sidebar");
-  let closeBtn = document.querySelector("#btn");
-  let searchBtn = document.querySelector(".bx-search");
+    <section class="home-section">
+        <div class="text">SAHA</div>
+        <table>
+            <tr>
+                <td>Username</td>
+                <td>:</td>
+                <td><input type="text" name="user"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>:</td>
+                <td><input type="password" name="pass"></td>
+            </tr>
+            <tr>
+                <td><button type="button">Masuk</button></td>
+                <td></td>
+                <td><button type="button">Daftar</button></td>
+            </tr>
+            <tr>
+                <td><button type="button"><a href="Beranda.html">Batal</a></button></td>
+            </tr>
+        </table>
+    </section>
 
-  closeBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("open");
-    menuBtnChange();//calling the function(optional)
-  });
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let closeBtn = document.querySelector("#btn");
+        let searchBtn = document.querySelector(".bx-search");
 
-  searchBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("open");
-    menuBtnChange();
-  });
-  function menuBtnChange() {
-   if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-   }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
-   }
-  }
-  </script>
+        closeBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange(); //calling the function(optional)
+        });
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("open");
+            menuBtnChange();
+        });
+
+        function menuBtnChange() {
+            if (sidebar.classList.contains("open")) {
+                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else {
+                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+        }
+    </script>
 </body>
+
 </html>
