@@ -226,7 +226,7 @@
 }
 .home-section{
     position: relative;
-    background: #E4E9F7;
+    background: #f8f8fa;
     min-height: 100vh;
     top: 0;
     left: 78px;
@@ -241,9 +241,10 @@
 .home-section .text{
     display: inline-block;
     color: #11101d;
-    font-size: 25px;
+    font-size: 40px;
     font-weight: 500;
-    margin: 18px
+    margin: 18px;
+    
 }
 @media (max-width: 420px) {
     .sidebar li .tooltip{
