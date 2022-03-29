@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>Not Found !</title>
+    <link href="aos.css" rel="stylesheet">
+    <title >Not Found !</title>
+    <link rel="icon" href="aset/eror.ico">
 </head>
 
 <body>
-
     <section class="h-100 w-100 bg-white" style="box-sizing: border-box;">
 
         <style>
@@ -21,6 +21,7 @@
             }
             
             .empty-2-2 .main-img {
+                
                 object-fit: cover;
                 object-position: center;
                 margin-bottom: 3rem;
@@ -68,18 +69,19 @@
                 }
             }
         </style>
-
-        <div class="empty-2-2 container mx-auto d-flex align-items-center justify-content-center flex-column" style="font-family: 'Poppins', sans-serif;">
+        <div data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500" class="empty-2-2 container mx-auto d-flex align-items-center justify-content-center flex-column" style="font-family: 'Poppins', sans-serif;">
             <img class="main-img img-fluid" src="http://api.elements.buildwithangga.com/storage/files/2/assets/Empty%20State/EmptyState2/Empty-2-2.png" alt="">
 
-            <div class="text-center w-100">
+            <div class="text-center w-100" data-aos="zoom-in" data-aos-duration="3000">
                 <h1 class="title-text">
                     KABOOM !!!
                 </h1>
                 <p class="title-caption">
                     The page you’re looking for isn’t found.<br class="d-sm-block d-none"> We suggest you Back to Homepage.
                 </p>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center" data-aos="zoom-in-down" data-aos-duration="4000">
                     <button class="btn btn-back d-inline-flex text-white">
                         <a href="index.html"> Back to Homepage</a>
                     </button>
@@ -88,8 +90,11 @@
         </div>
 
     </section>
-    <script src="function.js">
-    </script>
+    <script src="function.js"></script>
+    <script src="aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
