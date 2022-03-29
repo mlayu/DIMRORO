@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PPDB SMKKU</title>
+    <title>SMP MUHAMMADIYAH 2 MOJOSARI</title>
     <link href="styledex.css" rel="stylesheet">
+    <link href="aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -202,14 +203,14 @@
 
                 <div class="modal-item modal fade" id="targetModal-item" tabindex="-1" role="dialog" aria-labelledby="targetModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content bg-white border-0">
+                        <div class="modal-content bg-white border-0" data-aos="fade-down">
                             <div class="modal-header border-0" style="padding: 2rem; padding-bottom: 0">
                                 <a class="modal-title" id="targetModalLabel">
                                     <img style="margin-top: 0.5rem" height="30px" src="aset/4-42804_school-png-school-png-transparent-background-school-icon.png" alt="" />
                                 </a>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body" style="padding: 2rem; padding-top: 0; padding-bottom: 0">
+                            <div class="modal-body" style="padding: 2rem; padding-top: 0; padding-bottom: 0" data-aos="flip-left">
                                 <ul class="navbar-nav responsive me-auto mt-2 mt-lg-0">
                                     <li class="nav-item active">
                                         <a class="nav-link" href="index.html">Home</a>
@@ -286,7 +287,7 @@
                         </div>
                     </div>
                     <!-- Right Column -->
-                    <div class="right-column text-center d-flex justify-content-center pe-0">
+                    <div class="right-column text-center d-flex justify-content-center pe-0" data-aos="zoom-in-up">
                         <img id="img-fluid" class="h-auto mw-100" src="http://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header2/Header-2-1.png" alt="" />
                     </div>
                 </div>
@@ -497,7 +498,7 @@
             <div class="card-block">
                 <div class="card">
                     <div class="d-flex flex-lg-row flex-column align-items-center">
-                        <div class="me-lg-3">
+                        <div class="me-lg-3" data-aos="flip-down">
                             <img src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content2/Content-2-1%20(1).png" alt="" />
                         </div>
                         <div class="flex-grow-1 text-lg-start text-center card-text">
@@ -604,7 +605,7 @@
             }
         </style>
 
-        <div class="footer-2-2 container-xxl mx-auto position-relative p-0" style="font-family: 'Poppins', sans-serif">
+        <div class="footer-2-2 container-xxl mx-auto position-relative p-0" style="font-family: 'Poppins', sans-serif" data-aos="fade-down" data-aos-id="super-duper">
             <div class="list-footer">
                 <div class="row gap-md-0 gap-3">
                     <div class="col-lg-3 col-md-6">
@@ -761,13 +762,33 @@
                         <a href="" class="footer-link" style="text-decoration: none">Licenses</a>
                     </nav>
                     <nav class="d-flex flex-lg-row flex-column align-items-center justify-content-center">
-                        <p style="margin: 0">Copyright © 2021 Analystic Max</p>
+                        <p style="margin: 0">Copyright © 2022 Live C0ding Aslab</p>
                     </nav>
                 </div>
             </div>
         </div>
     </section>
     <script src="function.js">
+    </script>
+    <script src="aos.js">
+    </script>
+    <script>
+        document.querySelector('html').classList.remove('no-js');
+        if (!window.Cypress) {
+            const scrollCounter = document.querySelector('.js-scroll-counter');
+
+            AOS.init({
+                mirror: true
+            });
+
+            document.addEventListener('aos:in', function(e) {
+                console.log('in!', e.detail);
+            });
+
+            window.addEventListener('scroll', function() {
+                scrollCounter.innerHTML = window.pageYOffset;
+            });
+        }
     </script>
 </body>
 
